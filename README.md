@@ -2,17 +2,17 @@
 CNPJ API v1.1
 </h1>
 
-<a href='http://cn-pj.tech/api'>
+<a href='https://cn-pj.tech/api'>
   <img src='https://logodownload.org/wp-content/uploads/2014/11/receita-federal-logo-1.png'/>
 </a>
 
 <p align='center'>
-  <a href='http://cn-pj.tech/api'><img src='https://img.shields.io/badge/Atualiza%C3%A7%C3%A3o-22/12/2021-blue'/></a>
+  <a href='https://cn-pj.tech/api'><img src='https://img.shields.io/badge/Atualiza%C3%A7%C3%A3o-22/12/2021-blue'/></a>
 </p>
 
 <p align="center">⭐️ Deixe uma estrela ⭐️</p>
 
-<a align='center' href='http://cn-pj.tech/api'>
+<a align='center' href='https://cn-pj.tech/api'>
 
 `GET /api`
 
@@ -22,7 +22,7 @@ CNPJ API v1.1
 {
   "msg_ver": "CNPJ API v1.1",
   "ult_att": "22/12/2021",
-  "url_api": "http://cn-pj.tech/api/00000000000191"
+  "url_api": "https://cn-pj.tech/api/00000000000191"
 }
 ```
 
@@ -31,7 +31,7 @@ CNPJ API v1.1
 <tr><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grátis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr>
 <tr><td align='center'>
 
- <a href='http://cn-pj.tech/api/00000000000191'>`GET /api/:cnpj`</a>
+ <a href='https://cn-pj.tech/api/00000000000191'>`GET /api/:cnpj`</a>
 
  Autenticação | Limite
 :-:|:-:
@@ -39,7 +39,7 @@ Não|100/dia
 
 </td><td align='center'>
 
- <a href='http://cn-pj.tech/api2/00000000000191?token=...'>`GET /api2/:cnpj?token=…`</a>
+ <a href='https://cn-pj.tech/api2/00000000000191?token=...'>`GET /api2/:cnpj?token=…`</a>
 
  Autenticação | Limite
 :-:|:-:
@@ -124,7 +124,7 @@ Exemplo de uso com Python
 ```python
 from requests import get
 
-data = get('http://cn-pj.tech/api/13347016000117').json()
+data = get('https://cn-pj.tech/api/13347016000117').json()
 
 cnpj = data['cnpj']
 nome = data['razao_social']
@@ -138,7 +138,7 @@ print(cnpj, nome)
 ```python
 from requests import get
 
-data = get(f'http://cn-pj.tech/api2/13347016000117?token={TOKEN}').json()
+data = get(f'https://cn-pj.tech/api2/13347016000117?token={TOKEN}').json()
 
 cnpj = data['cnpj']
 nome = data['razao_social']
