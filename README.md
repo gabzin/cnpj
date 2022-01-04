@@ -1,5 +1,5 @@
 <h1 align='center'>
-CNPJ API v1.1
+CNPJ API v1.2
 </h1>
 
 <a href='https://cn-pj.tech/api'>
@@ -18,11 +18,31 @@ CNPJ API v1.1
 
 </a>
 
+Consultar cadastro completo do CNPJ.
+
 ```json
 {
   "msg_ver": "CNPJ API v1.1",
   "ult_att": "22/12/2021",
   "url_api": "https://cn-pj.tech/api/00000000000191"
+}
+```
+
+<a align='center' href='https://cn-pj.tech/localiza'>
+
+`GET /localiza`
+
+</a>
+
+Consultar empresas ativas em determinada localidade, baseada em sua atividade(CNAE).
+
+[Veja documentação](#localiza)
+
+```json
+{
+  "msg_ver": "LOCALIZA CNPJ API v1.2",
+  "ult_att": "03/01/2022",
+  "url_doc": "https://github.com/gabzin/cnpj"
 }
 ```
 
@@ -115,6 +135,48 @@ Sim|Sem limites
 }
 ```
 
+<table align='center' id="localiza">
+
+<tr><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grátis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr>
+<tr><td align='center'>
+
+ <a href='https://cn-pj.tech/localiza/6920601?cidade=mirandopolis&uf=sp'>`GET /localiza/:cnae?cidade=…&uf=…`</a>
+
+ Autenticação | Limite
+:-:|:-:
+Não|100/dia
+
+</td><td align='center'>
+
+ <a href='https://cn-pj.tech/localiza2/6920601?cidade=mirandopolis&uf=sp&token=...'>`GET /localiza2/:cnae?cidade=…&uf=…&token…`</a>
+
+ Autenticação | Limite
+:-:|:-:
+Sim|Sem limites
+
+</td></tr> </table>
+
+```json
+{
+  "cnae": "6920601",
+  "cnae_desc": "Atividades de contabilidade",
+  "cidade": "MIRANDOPOLIS",
+  "uf": "SP",
+  "empresas": [
+    "https://cn-pj.tech/api/00033913000104",
+    "https://cn-pj.tech/api/11641813000187",
+    "https://cn-pj.tech/api/12740493000185",
+    "https://cn-pj.tech/api/12910981000274",
+    "https://cn-pj.tech/api/15736855000152",
+    "https://cn-pj.tech/api/18231657000125",
+    "https://cn-pj.tech/api/22480235000160",
+    "https://cn-pj.tech/api/51103042000199",
+    "https://cn-pj.tech/api/54868351000148",
+    "https://cn-pj.tech/api/59766089000144"
+  ]
+}
+```
+
 <h1 align='center'>
 Exemplo de uso com Python
 </h1>
@@ -137,6 +199,7 @@ print(cnpj, nome)
 
 ```python
 from requests import get
+TOKEN = ""
 
 data = get(f'https://cn-pj.tech/api2/13347016000117?token={TOKEN}').json()
 
