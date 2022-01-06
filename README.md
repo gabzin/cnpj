@@ -18,13 +18,15 @@ CNPJ API v1.2
 
 </a>
 
-Consultar cadastro completo do CNPJ.
+Consultar cadastro completo do de empresas pelo CNPJ.
+
+[Veja documentação](#cnpj)
 
 ```json
 {
-  "msg_ver": "CNPJ API v1.1",
-  "ult_att": "22/12/2021",
-  "url_api": "https://cn-pj.tech/api/00000000000191"
+  "msg_ver": "CNPJ API v2.0",
+  "ult_att": "06/01/2022",
+  "url_doc": "https://github.com/gabzin/cnpj"
 }
 ```
 
@@ -40,13 +42,31 @@ Consultar empresas ativas em determinada localidade, baseada em sua atividade(CN
 
 ```json
 {
-  "msg_ver": "LOCALIZA CNPJ API v1.2",
-  "ult_att": "03/01/2022",
+  "msg_ver": "LOCALIZA CNPJ API v2.0",
+  "ult_att": "06/01/2022",
   "url_doc": "https://github.com/gabzin/cnpj"
 }
 ```
 
-<table align='center'>
+<a align='center' href='https://cn-pj.tech/socio'>
+
+`GET /socio`
+
+</a>
+
+Consultar socios em empresas pelo nome.
+
+[Veja documentação](#socio)
+
+```json
+{
+  "msg_ver": "BUSCA SOCIO API v2.0",
+  "ult_att": "06/01/2022",
+  "url_doc": "https://github.com/gabzin/cnpj"
+}
+```
+
+<table align='center' id="cnpj">
 
 <tr><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grátis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr>
 <tr><td align='center'>
@@ -142,17 +162,17 @@ Sim|Sem limites
 
  <a href='https://cn-pj.tech/localiza/6920601?cidade=mirandopolis&uf=sp'>`GET /localiza/:cnae?cidade=…&uf=…`</a>
 
- Autenticação | Limite
-:-:|:-:
-Não|100/dia
+ Autenticação | Limite | Parametros(Obrigatórios)
+:-:|:-:|:-:
+Não|100/dia|cidade, uf
 
 </td><td align='center'>
 
  <a href='https://cn-pj.tech/localiza2/6920601?cidade=mirandopolis&uf=sp&token=...'>`GET /localiza2/:cnae?cidade=…&uf=…&token…`</a>
 
- Autenticação | Limite
-:-:|:-:
-Sim|Sem limites
+ Autenticação | Limite | Parametros(Obrigatórios)
+:-:|:-:|:-:
+Sim|Sem limites|cidade, uf
 
 </td></tr> </table>
 
@@ -174,6 +194,49 @@ Sim|Sem limites
     "https://cn-pj.tech/api/54868351000148",
     "https://cn-pj.tech/api/59766089000144"
   ]
+}
+```
+
+<table align='center' id="socio">
+
+<tr><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grátis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr>
+<tr><td align='center'>
+
+ <a href='https://cn-pj.tech/socio/JOAO%20DA%20SILVA%20PEREIRA?exato'>`GET /socio/:nome?exato`</a>
+
+ Autenticação | Limite | Parametros(Opcionais)
+:-:|:-:|:-:
+Não|100/dia|exato, ativas
+
+</td><td align='center'>
+
+ <a href='https://cn-pj.tech/socio2/JOAO%20DA%20SILVA%20PEREIRA?exato&token=...'>`GET /socio2/:nome?token=…&exato`</a>
+
+ Autenticação | Limite | Parametros(Opcionais)
+:-:|:-:|:-:
+Sim|Sem limites|exato, ativas
+
+</td></tr> </table>
+
+```json
+{
+  "nome": "JOAO PEREIRA SILVA",
+  "nome_exato": true,
+  "ativas": true,
+  "socios": {
+    "***394098**": [
+      "https://cn-pj.tech/api/07927941000114"
+    ],
+    "***348203**": [
+      "https://cn-pj.tech/api/20677542000100"
+    ],
+    "***855853**": [
+      "https://cn-pj.tech/api/03327501000175"
+    ],
+    "***381638**": [
+      "https://cn-pj.tech/api/24326348000131"
+    ]
+  }
 }
 ```
 
