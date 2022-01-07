@@ -210,7 +210,7 @@ Não|100/dia|exato, ativas
 
 </td><td align='center'>
 
- <a href='https://cn-pj.tech/socio2/JOAO%20DA%20SILVA%20PEREIRA?exato&token=...'>`GET /socio2/:nome?token=…&exato`</a>
+ <a href='https://cn-pj.tech/socio2/JOAO%20DA%20SILVA%20PEREIRA?exato&token=...'>`GET /socio2/:nome?token=…`</a>
 
  Autenticação | Limite | Parametros(Opcionais)
 :-:|:-:|:-:
