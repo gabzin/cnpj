@@ -1,16 +1,25 @@
 <h1 align='center'>
 CNPJ API v2.0
 </h1>
-
-<a href='https://cn-pj.tech/api'>
-  <img src='https://logodownload.org/wp-content/uploads/2014/11/receita-federal-logo-1.png'/>
-</a>
+<p align='center'>
+  <a href='https://cn-pj.tech'>
+    <img src='https://cn-pj.tech/static/img/cnpjtech.png'/>
+  </a>
+</p>
 
 <p align='center'>
-  <a href='https://cn-pj.tech/api'><img src='https://img.shields.io/badge/Atualiza%C3%A7%C3%A3o-22/12/2021-blue'/></a>
+  <a href='https://cn-pj.tech/api'><img src='https://img.shields.io/badge/Atualiza%C3%A7%C3%A3o-12/01/2022-blue'/></a>
 </p>
 
 <p align="center">⭐️ Deixe uma estrela ⭐️</p>
+
+<h2 align="center" id="cartaocnpj">CARTÃO CNPJ EM PDF SEM RECAPTCHA</h2>
+
+<p align="center">
+  <a href='https://cn-pj.tech/'><img src='https://i.imgur.com/ZaJXZnW.png'/></a>
+</p>
+
+<h2 align="center">ENDPOINTS</h2>
 
 <a align='center' href='https://cn-pj.tech/api'>
 
@@ -25,7 +34,7 @@ Consultar cadastro completo do de empresas pelo CNPJ.
 ```json
 {
   "msg_ver": "CNPJ API v2.0",
-  "ult_att": "06/01/2022",
+  "ult_att": "12/01/2022",
   "url_doc": "https://github.com/gabzin/cnpj"
 }
 ```
@@ -43,7 +52,7 @@ Consultar empresas ativas em determinada localidade, baseada em sua atividade(CN
 ```json
 {
   "msg_ver": "LOCALIZA CNPJ API v2.0",
-  "ult_att": "06/01/2022",
+  "ult_att": "12/01/2022",
   "url_doc": "https://github.com/gabzin/cnpj"
 }
 ```
@@ -61,7 +70,7 @@ Consultar socios em empresas pelo nome.
 ```json
 {
   "msg_ver": "BUSCA SOCIO API v2.0",
-  "ult_att": "06/01/2022",
+  "ult_att": "12/01/2022",
   "url_doc": "https://github.com/gabzin/cnpj"
 }
 ```
