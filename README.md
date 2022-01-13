@@ -84,7 +84,7 @@ Consultar socios em empresas pelo nome.
 
  Autenticação | Limite
 :-:|:-:
-Não|100/dia
+Não|25/dia
 
 </td><td align='center'>
 
@@ -173,7 +173,7 @@ Sim|Sem limites
 
  Autenticação | Limite | Parametros(Obrigatórios)
 :-:|:-:|:-:
-Não|100/dia|cidade, uf
+Não|25/dia|cidade, uf
 
 </td><td align='center'>
 
@@ -215,7 +215,7 @@ Sim|Sem limites|cidade, uf
 
  Autenticação | Limite | Parametros(Opcionais)
 :-:|:-:|:-:
-Não|100/dia|exato, ativas
+Não|25/dia|exato, ativas
 
 </td><td align='center'>
 
