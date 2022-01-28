@@ -1,5 +1,5 @@
 <h1 align='center'>
-CNPJ API v2.0
+CNPJ TECH v2.0
 </h1>
 <p align='center'>
   <a href='https://cn-pj.tech'>
