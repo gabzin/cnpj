@@ -100,12 +100,13 @@ Sim|Sem limites
 ```json
 {
   "cnpj": "13347016000117",
-  "matriz_filial": "Matriz",
+  "matriz_filial": "Filial",
   "razao_social": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
   "nome_fantasia": null,
   "cod_natureza_juridica": 2062,
   "natureza_juridica": "Sociedade Empresária Limitada",
   "porte": "DEMAIS",
+  "capital": 3631639.0,
   "simples": {
     "optante": false,
     "data_opcao": null,
@@ -116,21 +117,22 @@ Sim|Sem limites
     "data_opcao": null,
     "data_exclusao": null
   },
-  "data_inicio_ativ": "14/02/2011",
-  "situacao_cadastral": "ATIVA",
-  "data_situacao_cadastral": "14/02/2011",
-  "motivo_situacao_cadastral": "SEM MOTIVO",
+  "data_inicio_ativ": "09/08/2012",
+  "situacao_cadastral": "BAIXADA",
+  "data_situacao_cadastral": "18/06/2013",
+  "motivo_situacao_cadastral": "EXTINCAO POR ENCERRAMENTO LIQUIDACAO VOLUNTARIA",
   "cnae_principal": {
-    "7312200": "Agenciamento de espaços para publicidade, exceto em veículos de comunicação"
-  },
-  "cnae_secundaria": {
-    "7020400": "Atividades de consultoria em gestão empresarial, exceto consultoria técnica específica",
     "7319004": "Consultoria em publicidade"
   },
+  "cnae_secundaria": {
+    "null": null
+  },
   "contato": {
-    "ddd": "11",
-    "tel": "30736800",
-    "email": "TAXCOMPLIANCEBR@FB.COM"
+    "ddd_1": "11",
+    "tel_1": "30486800",
+    "ddd_2": null,
+    "tel_2": null,
+    "email": "rita.nader@bakermckenzie.com"
   },
   "endereco": {
     "cep": "4542000",
@@ -139,9 +141,9 @@ Sim|Sem limites
     "municipio": "SAO PAULO",
     "bairro": "ITAIM BIBI",
     "tipo_logadouro": "RUA",
-    "logadouro": "LEOPOLDO COUTO DE MAGALHAES JUNIOR",
+    "logadouro": "LEOPOLDO COUTO MAGALHAES JUNIOR",
     "numero": "700",
-    "complemento": "ANDAR 1/5/6/9/14 E 15     EDIF  INFINITY"
+    "complemento": "ANDAR 5"
   },
   "qsa": [
     {
@@ -160,7 +162,9 @@ Sim|Sem limites
       "qualificacao": "Administrador",
       "idade": "41-50 Anos"
     }
-  ]
+  ],
+  "limites": "21/25",
+  "prox_reset": "02/02/2022 ás 08:16"
 }
 ```
 
@@ -202,7 +206,9 @@ Sim|Sem limites|cidade, uf
     "https://cn-pj.tech/api/51103042000199",
     "https://cn-pj.tech/api/54868351000148",
     "https://cn-pj.tech/api/59766089000144"
-  ]
+  ],
+  "limites": "24/25",
+  "prox_reset": "02/02/2022 ás 08:22"
 }
 ```
 
@@ -233,19 +239,21 @@ Sim|Sem limites|exato, ativas
   "nome_exato": true,
   "ativas": true,
   "socios": {
-    "***394098**": [
-      "https://cn-pj.tech/api/07927941000114"
-    ],
     "***348203**": [
       "https://cn-pj.tech/api/20677542000100"
     ],
-    "***855853**": [
-      "https://cn-pj.tech/api/03327501000175"
-    ],
     "***381638**": [
       "https://cn-pj.tech/api/24326348000131"
+    ],
+    "***394098**": [
+      "https://cn-pj.tech/api/07927941000114"
+    ],
+    "***855853**": [
+      "https://cn-pj.tech/api/03327501000175"
     ]
-  }
+  },
+  "limites": "23/25",
+  "prox_reset": "02/02/2022 ás 08:24"
 }
 ```
 
