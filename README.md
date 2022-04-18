@@ -1,9 +1,9 @@
 <h1 align='center'>
-CNPJ TECH v2.0
+CNPJ TECH
 </h1>
 <p align='center'>
   <a href='https://cn-pj.tech'>
-    <img src='https://cn-pj.tech/static/img/cnpjtech.png'/>
+    <img src='https://github.com/gabzin/cnpj/blob/main/cnpjtech.png?raw=true'/>
   </a>
 </p>
 
@@ -39,41 +39,7 @@ Consultar cadastro completo do de empresas pelo CNPJ.
 }
 ```
 
-<a align='center' href='https://cn-pj.tech/localiza'>
 
-`GET /localiza`
-
-</a>
-
-Consultar empresas ativas em determinada localidade, baseada em sua atividade(CNAE).
-
-[Veja documentação](#localiza)
-
-```json
-{
-  "msg_ver": "LOCALIZA CNPJ API v2.0",
-  "ult_att": "12/01/2022",
-  "url_doc": "https://github.com/gabzin/cnpj"
-}
-```
-
-<a align='center' href='https://cn-pj.tech/socio'>
-
-`GET /socio`
-
-</a>
-
-Consultar socios em empresas pelo nome.
-
-[Veja documentação](#socio)
-
-```json
-{
-  "msg_ver": "BUSCA SOCIO API v2.0",
-  "ult_att": "12/01/2022",
-  "url_doc": "https://github.com/gabzin/cnpj"
-}
-```
 
 <table align='center' id="cnpj">
 
@@ -168,94 +134,6 @@ Sim|Sem limites
 }
 ```
 
-<table align='center' id="localiza">
-
-<tr><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grátis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr>
-<tr><td align='center'>
-
- <a href='https://cn-pj.tech/localiza/6920601?cidade=mirandopolis&uf=sp'>`GET /localiza/:cnae?cidade=…&uf=…`</a>
-
- Autenticação | Limite | Parametros(Obrigatórios)
-:-:|:-:|:-:
-Não|25/dia|cidade, uf
-
-</td><td align='center'>
-
- <a href='https://cn-pj.tech/localiza2/6920601?cidade=mirandopolis&uf=sp&token=...'>`GET /localiza2/:cnae?cidade=…&uf=…&token…`</a>
-
- Autenticação | Limite | Parametros(Obrigatórios)
-:-:|:-:|:-:
-Sim|Sem limites|cidade, uf
-
-</td></tr> </table>
-
-```json
-{
-  "cnae": "6920601",
-  "cnae_desc": "Atividades de contabilidade",
-  "cidade": "MIRANDOPOLIS",
-  "uf": "SP",
-  "empresas": [
-    "https://cn-pj.tech/api/00033913000104",
-    "https://cn-pj.tech/api/11641813000187",
-    "https://cn-pj.tech/api/12740493000185",
-    "https://cn-pj.tech/api/12910981000274",
-    "https://cn-pj.tech/api/15736855000152",
-    "https://cn-pj.tech/api/18231657000125",
-    "https://cn-pj.tech/api/22480235000160",
-    "https://cn-pj.tech/api/51103042000199",
-    "https://cn-pj.tech/api/54868351000148",
-    "https://cn-pj.tech/api/59766089000144"
-  ],
-  "limites": "24/25",
-  "prox_reset": "02/02/2022 ás 08:22"
-}
-```
-
-<table align='center' id="socio">
-
-<tr><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grátis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr>
-<tr><td align='center'>
-
- <a href='https://cn-pj.tech/socio/JOAO%20DA%20SILVA%20PEREIRA?exato'>`GET /socio/:nome?exato`</a>
-
- Autenticação | Limite | Parametros(Opcionais)
-:-:|:-:|:-:
-Não|25/dia|exato, ativas
-
-</td><td align='center'>
-
- <a href='https://cn-pj.tech/socio2/JOAO%20DA%20SILVA%20PEREIRA?exato&token=...'>`GET /socio2/:nome?token=…`</a>
-
- Autenticação | Limite | Parametros(Opcionais)
-:-:|:-:|:-:
-Sim|Sem limites|exato, ativas
-
-</td></tr> </table>
-
-```json
-{
-  "nome": "JOAO PEREIRA SILVA",
-  "nome_exato": true,
-  "ativas": true,
-  "socios": {
-    "***348203**": [
-      "https://cn-pj.tech/api/20677542000100"
-    ],
-    "***381638**": [
-      "https://cn-pj.tech/api/24326348000131"
-    ],
-    "***394098**": [
-      "https://cn-pj.tech/api/07927941000114"
-    ],
-    "***855853**": [
-      "https://cn-pj.tech/api/03327501000175"
-    ]
-  },
-  "limites": "23/25",
-  "prox_reset": "02/02/2022 ás 08:24"
-}
-```
 
 <h1 align='center'>
 Exemplo de uso com Python
@@ -295,5 +173,5 @@ print(cnpj, nome)
 >
 > Dados atualizados conforme atualização do banco de dados da Receita Federal.
 > 
-> Mais info: gabriel-tavares2009@hotmail.com
+> Mais info: https://cn-pj.tech/contato
 > 
